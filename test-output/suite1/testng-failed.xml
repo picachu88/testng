@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [suite1]">
+  <listeners>
+    <listener class-name="com.boray.config.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test thread-count="5" name="test1(failed)">
+    <classes>
+      <class name="com.boray.cases.GetUserInfoListTest">
+        <methods>
+          <include name="getUserListInfo"/>
+        </methods>
+      </class> <!-- com.boray.cases.GetUserInfoListTest -->
+      <class name="com.boray.cases.LoginTest">
+        <methods>
+          <include name="loginSuccess" invocation-numbers="1"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.boray.cases.LoginTest -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [suite1] -->

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- @BeforeSuite -->
+<suite name="suite1">
+
+	<!-- @BeforeTest -->
+    <test name="test1">
+        <classes>
+        	<!-- @BeforeClass -->
+            <class name="com.boray.cases.LoginTest">
+                <methods>
+                	<!-- @BeforeMethod -->
+                    <include name="loginSuccess"/>
+                    <!-- @AfterMethod -->
+                    
+                    <!-- @BeforeMethod -->
+                    <include name="loginFail"/>
+                    <!-- @AfterMethod -->
+                </methods>
+            </class>
+			<!-- @AfterClass -->
+
+			<!-- @BeforeClass -->
+            <class name="com.boray.cases.GetUserInfoListTest">
+                <methods>
+                    <include name="getUserListInfo"/>
+                </methods>
+            </class>
+            <!-- @AfterClass -->
+        </classes>
+    </test>
+    <!-- @AfterTest -->
+
+    <listeners>
+        <listener class-name="com.boray.config.ExtentTestNGIReporterListener" />
+    </listeners>
+
+</suite>
+<!-- @AfterSuite -->

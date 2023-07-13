@@ -1,0 +1,21 @@
+#存在的用户
+loginSuccess:
+ -
+  userName: "SUPERADMIN_SEP_RAPIDS"
+  password: "rapids"
+  expectedMsg: "操作成功"
+  expectedCode: "200"
+ -
+  userName: "SUPERADMIN_SEP_user2"
+  password: "123456"
+  expectedMsg: "操作成功"
+  expectedCode: "300"
+
+#不存在的用户
+loginFail: 
+ -
+  userName: "failuser"
+  password: "123456"
+  expectedMsg: "登录失败,用户名或者密码错误"
+  expectedCode: "401"
+  
